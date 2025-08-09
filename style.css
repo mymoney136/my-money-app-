@@ -1,0 +1,200 @@
+/* General styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    direction: rtl; /* For Hebrew */
+    text-align: right;
+}
+
+/* Main container */
+#root {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Section for budget summary */
+.budget-summary {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.summary-card {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    flex: 1;
+    margin: 0 5px;
+}
+
+.summary-card h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.summary-card p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Form for adding transactions */
+.add-transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-transaction-form input,
+.add-transaction-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-transaction-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-transaction-form button:hover {
+    background-color: #0056b3;
+}
+
+/* List of transactions */
+.transaction-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-list-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-list-item span {
+    font-size: 1em;
+}
+
+.transaction-amount.income {
+    color: green;
+    font-weight: bold;
+}
+
+.transaction-amount.expense {
+    color: red;
+    font-weight: bold;
+}
+
+.transaction-list-item button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.transaction-list-item button:hover {
+    background-color: #c82333;
+}
+
+/* Settings and Reports buttons */
+.settings-and-reports {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.settings-and-reports button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#show-settings {
+    background-color: #6c757d;
+    color: white;
+}
+
+#show-settings:hover {
+    background-color: #5a6268;
+}
+
+#generate-report {
+    background-color: #28a745;
+    color: white;
+}
+
+#generate-report:hover {
+    background-color: #218838;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+    text-align: right;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
